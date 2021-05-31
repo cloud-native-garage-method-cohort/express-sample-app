@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: poornima-ta-live-pfs
-    app.kubernetes.io/instance: poornima-ta-live-pfs
-    app.kubernetes.io/name: poornima-ta-live-pfs
-  name: poornima-ta-live-pfs
+    app: poornima-express-sample-app
+    app.kubernetes.io/instance: poornima-express-sample-app
+    app.kubernetes.io/name: poornima-express-sample-app
+  name: poornima-express-sample-app
 spec:
   ports:
     - name: http
@@ -13,7 +13,7 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    app.kubernetes.io/instance: poornima-ta-live-pfs
-    app.kubernetes.io/name: poornima-ta-live-pfs
+    app.kubernetes.io/instance: poornima-express-sample-app
+    app.kubernetes.io/name: poornima-express-sample-app
   sessionAffinity: None
   type: ClusterIP

@@ -3,27 +3,27 @@ kind: Deployment
 metadata:
   annotations:
     app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
-    app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
+    app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-cohort/poornima-express-sample-app
   labels:
-    app: poornima-ta-live-pfs
-    app.kubernetes.io/instance: poornima-ta-live-pfs
-    app.kubernetes.io/name: poornima-ta-live-pfs
+    app: poornima-express-sample-app
+    app.kubernetes.io/instance: poornima-express-sample-app
+    app.kubernetes.io/name: poornima-express-sample-app
     app.openshift.io/runtime: js
-  name: poornima-ta-live-pfs
+  name: poornima-express-sample-app
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app.kubernetes.io/instance: poornima-ta-live-pfs
-      app.kubernetes.io/name: poornima-ta-live-pfs
+      app.kubernetes.io/instance: poornima-express-sample-app
+      app.kubernetes.io/name: poornima-express-sample-app
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app.kubernetes.io/instance: poornima-ta-live-pfs
-        app.kubernetes.io/name: poornima-ta-live-pfs
+        app.kubernetes.io/instance: poornima-express-sample-app
+        app.kubernetes.io/name: poornima-express-sample-app
     spec:
       containers:
         - env:
@@ -42,7 +42,7 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
-          name: poornima-ta-live-pfs
+          name: poornima-express-sample-app
           ports:
             - containerPort: 3000
               name: http
